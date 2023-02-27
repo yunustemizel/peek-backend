@@ -4,6 +4,6 @@ import { Injectable } from '@nestjs/common';
 @Injectable()
 export class PeekService {
   async getCode() {
-    return process.env.PEEK_CODE;
+    return {token:process.env.PEEK_TOKEN, apiCode:process.env.PEEK_CODE};
   }
 }
